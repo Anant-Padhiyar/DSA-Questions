@@ -1,435 +1,354 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Questions</title>
-   
-  </head>
-  <script>
 
-// 0 - Fobinacci
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-// function Fib(V){
+</head>
 
-// return V
+<script>
 
-// }
-// let V = 7;
-// console.log('Fib ' + V + ' = \n' + Fib(V));
+// 1 - Fib N 
 
-
-// 1 fibonacci
-// First N Fib Numbers 
-
-// function Fib(V){
-// if(V<2){
-//   return false
-// }{
-// let a = [0,1];
-// for (let index = 2; index < V; index++) {
-//   a [ index] = a[index-1]+a[index-2]
+// function Fib(N){
+// let a = [0,1]
+// for (let index = 2; index < N; index++){
+// a[index] = a[index-1] + a[index-2]
 // }
 // return a
 // }
-// }
-// let V = 5 ; 
-// console.log(Fib(V))
+// let a = 3
+// console.log(Fib(a))
 
+// 2 - Fib Number <= N 
 
-// 2 fibonacci
-// First N Fib Numbers <= V
-
-// function Fib(V){
-// if(V<2){
-//   return false
-// }{
-// let a = [0,1];
-// let l = 0
-// for (let index = 2; index < V; index++) {
-// l = a[index-1]+a[index-2]
-// if(l>V){
-// break;
+// function Fib(N){
+// let a = [0,1]
+// for (let index = 2; index < N; index++){
+// l = a[index-1] + a[index-2]
+// if(l>N){
+//     break
 // }
 // a[index] = l
 // }
 // return a
 // }
+// let a = 34
+// console.log(Fib(a))
+
+// 3 - Recursive Fibonacci
+
+// function Fib(N){
+// if(N<2){
+//     return N
 // }
-// let V = 8 ; 
-// console.log(Fib(V))
+// return Fib(N-1)+Fib(N-2)
+// }
+// let a = 3
+// console.log(Fib(a))
 
+// 4 - Climbing Starecase
 
-// 2 N TH Fib Number
-
-// function Fib(V){
-
-//   if(V<2){
-   
-//     return V
-//   }
- 
-
-//   return Fib(V-1)+Fib(V-2)
+// function Climbing_Starecase(N){
+// let a = [1,2]
+// // console.log(N)
+// for (let index = 2; index < N; index++) {
+//  a[index] = a[index-1]+a[index-2]
+// //  console.log(a[index])
 // }
 
-// let V = 2 ; 
-// console.log(Fib(V))
+// return a[N-1]
+// }
+// let a = 10;
+// console.log(Climbing_Starecase(a))
 
-// 4 isprime
+// 5 - Factorial N
 
-// [1,2,3,5,7,11]
+// function Fac(N){
+// let x = 1;
+// for (let index = 1; index < N + 1 ; index++) {
+// x *=index;
+// }
+// return x
+// }
+// let a = 4 
+// console.log(Fac(a))
 
-// function isPrime(V){
+// 6 - Faactorial
 
-//   if(V<2){
+// function isPrime(N){
+
+// if(N<2){
 //     return false
-//   }else{
+// }
 
-// for (let index = 2; index < Math.sqrt(V); index++) {
-//   // console.log(index)
-// if(V%index==0){
-//   return false
+// for (let index = 2; index < Math.sqrt(a); index++) {
+// // console.log(a,index,a % index ==0)
+// if(a % index ==0){
+// return false
 // }
 // }
-// return true
-//   }
+// return `Yes ${a} is Prime`
 // }
-// let V = 13;
-// console.log(isPrime(V))
+// let a = 17;
+// console.log(isPrime(a))
+
+// 7 - isP2
 
 
-// 5 Fac
-
-// function Fac(V){
-
-//   if(V<0){
+// function isP2(N){
+// if(N<2){
 //     return false
-//   }else{
-// let a = 1
-// for (let index = 1; index < V+1; index++) {
-// a *=index
 // }
-// return a
-//   }
-// }
-// let V = 5;
-// console.log(Fac(V))
-
-
-// 6 = Recursive Fib Findng N th Fib 
-
-// function Fib(V){
-
-//   if(V<2){
-//     return V
-//   }
-//   return Fib(V-1)+Fib(V-2)
-
-// }
-// let V = 7
-// console.log(Fib(V))
-
-
-// 7 isP2 (N isPowerof 2)
-
-// function isP2(V){
-// if(V<1){
-//   return false
-// }
-// let x = V
-// while(x>1)
-// {
-// console.log(x)
-
-// if(x%2!==0){
-//   return false
-//   console.log('Ok')
-//   break
-// }
-// x/=2
+// let x = N
+// while(x>1){
+// console.log(x,x%2==0)
+//     if(x%2!==0){
+//         return false
+//     }
+//     x = x/2
 // }
 // return true
 // }
-// let V = 16
-// console.log(isP2(V))
 
-// 8 Recursive Fib
+// let a = 68
+// console.log(isP2(a))
 
-// function Fib(V){
-// if(V<0){
-//   return false
+// 8 - recursive Factorial
+
+// 0! = !0 * 1;
+// 1! = !0 * 1;
+// 2! = !1 * 2;
+// 3! = !2 * 3;
+
+// function RFac(N){
+// if(N<1){
+//     return 1
 // }
-// if(V<2){
-//   return V
+//     return RFac(N-1) * N
 // }
-// // console.log(V)
-// return Fib(V-1)+Fib(V-2)
+// let a = 5 
+// console.log(RFac(a))
 
+// 9 - Lenear Serach
 
-// }
-// let V = -3 ; 
-// console.log(Fib(V))
-
-// 9 Recursive Factorial
-// 0! & 1! = 1
-
-// 0! = 0! * 1
-// 1! = 0! * 1
-// 2! = 1! * 2
-// 3! = 2! * 3
-
-
-// function Fac(V){
-//  if(V<0){
-//   return false
-// }
-// if(V==0){
-//   return 1
-// }
-// let a = V
-// return Fac(a-1)* a
-// }
-// let V = 3
-// console.log(Fac(V))
-
-// 10 Linear Search 
-
-// let a = [-5,2,10,4,6];
-
-// function L(a , V)102{
-// // console.log(V)
+// let a = [-6,5,7,8,10,23];
+// function L(a,V){
+// // console.log(a,V)
 // for (let index = 0; index < a.length; index++) {
-// if(a[index]==V){
-//     return `V At Index ${index}`
-//   } 
+// if(a[index] == V){
+//     return index
+// }  
 // }
 // return false
 // }
-// let V = 6;
-// console.log(L(a,V))
 
+// let b = -6
+// console.log(L(a,b))
 
-// 10 Binery Search 
+// 10 - Binery Search
 
-// let a = [1,23,35,44,57,64,90];
-
-// function L(a , V){
-// // console.log(V)
-
-// let LeftIndex = 0
-// let RightIndex = a.length-1
-
-// while(LeftIndex<=RightIndex){
-
-//   let MidIndex = Math.floor((LeftIndex+RightIndex)/2);
-
-//   console.log(a[MidIndex])
-
-//   if(a[MidIndex]==V){
-//     return `Ok ${V}`
-//   }
-//   if(V<a[MidIndex]){
-//     RightIndex = MidIndex -1
-//   }
-//   else{
-//     LeftIndex = MidIndex + 1
-//   }
+// function Bs(a,V){
+// let l = 0 ;
+// let r = a.length-1
+// do{
+//     let m = Math.floor((l+r)/2)  
+// if(V==a[m]){
+// return m
 // }
-
-
-// return `No`
-// }
-// let V = 28;
-// console.log(L(a,V))
-
-
-// let a = [1,23,36,45,57,68,73,85,97,102];
-
-
-// function B(a, V) {
-//     let l = 0;
-//     let r = a.length - 1; // r = 9, because the last index of the array is 9
-//     while (l <= r) {
-//         let M = Math.floor((l + r) / 2); // Calculate the middle index
-        
-//         // Log the current state of l, r, and M
-//         console.log(`l = ${l}, r = ${r}, M = ${M}, a[M] = ${a[M]}`);
-        
-//         if (a[M] == V) {
-//             console.log(`Found: a[M] = ${a[M]} at index M = ${M}`);
-//             return M;
-//         }
-        
-//         if (V < a[M]) {
-//             console.log(`V = ${V} is less than a[M] = ${a[M]}, so adjust r`);
-//             r = M - 1; // Move r to the left half of the array
-//         } else {
-//             console.log(`V = ${V} is greater than a[M] = ${a[M]}, so adjust l`);
-//             l = M + 1; // Move l to the right half of the array
-//         }
-//     }
-//     return 'No'; // If the value is not found
-// }
-
-
-// let V = 1
-// console.log(B(a,V))
-
-
-// 11 - Recursive Binery Search
-
-// let a = [1,23,35,44,57,64,90];
-
-// let LeftIndex = 0
-// let RightIndex = a.length-1
-
-// function L(a , V){
-
-// return search(a,V,0,a.length-1)
-// }
-
-// function search(a,V,l,r){
-
-//   if(l>r){
-//     console.log(l,r)
-//     return 'No'
-//   }
-//   console.log(l,r)
-//   let M = Math.floor((l+r)/2);
-//   console.log(M)
-//   if(V == a[M])
-// {
-//   return `Ok ${V} at Index ${M}`
-// }
-
-// if(V<a[M]){
-// return search(a,V,l,M-1)
+// if(V<a[m]){
+// r = m-1
 // }
 // else{
-//   return search(a,V,M+1,r)
+// l = m+1
 // }
-//   return true
+// }while(l<=r)
+// return false
+// console.log(l,r,m,a[m])
 // }
+// let a = [-6,5,7,8,10,23];
+// let b = -6
+// console.log(Bs(a,b))
 
-// let V = 0;
-// console.log(L(a,V))
+// 11 - Recursive Binery
+
+// function Bs(a,V){
+//     return search(a,V,0,a.length-1)
+// }
+// function search(a,V,l,r){
+// if(l>r){
+// return false
+// }
+// let M = Math.floor((l+r)/2);
+// if(V==a[M]){
+// return M
+// }
+// if(V<a[M]){
+// return search(a,V,l,M-1)}
+// else{
+// return search(a,V,M+1,r)
+// }
+// }
+// let a = [-6,5,7,8,10,23];
+// let b = 23 
+// console.log(Bs(a,b))
 
 
-// 12 Buuble Sort
+// 12 - Buble Sort
 
-// let a = [-6,20,8,-2,4];
-
-// function BS(a){
-
-// let swaped ;
- 
-// // console.log(swaped)
+// function bs(a){
+// let swaped
 // do{
-//   swaped = false
+// swaped = false
 // for (let index = 0; index < a.length; index++) {
-
-// // console.log(index)
-// if(a[index]>a[index+1]){
-//  console.log(a[index],a[index+1])
+// console.log(index,a[index]>a[index+1])
+//  if(a[index]>a[index+1]){
 // let temp = a[index]
 // a[index] = a[index+1]
-// a[index+1]=temp
-// swaped = true
+// a[index + 1] = temp
 // console.log(a)
+// swaped = true
+//  }   
+
 // }
-// }
-// }
-// while(swaped)
+// }while(swaped)
+
 // return a
 // }
 
-// console.log(BS(a))
+// let a =  [-6,8,5,20,-4];
+// console.log(bs(a))
 
-// 13 Insertion Sort
+// 13 - Quick Sort
 
-// let a = [-6,20,8,-2,4];
+// function Qc(a){
+//     if(a.length<2){
+//         return a
+//     }
 
-// function IS(a){
-// console.log(a)
-//   for (let i= 1; i < a.length-1; i++) {
-//    let numberI = a[i]
+//     let l = []
+//     let r = []
+//     let M  = a.length-1
+// let x = a[M]
+// for (let index = 0; index < a.length-1; index++) {
 
-//    let j = i-1;
+//     if(a[index]<a[M]){
+// l.push(a[index])
+//     }else{
+// r.push(a[index])
+//     }
 
-//    console.log(numberI , a[j])
+// }
 
-//    while(j>=0 && a[j]>numberI){
+// return [...Qc(l),x,...Qc(r)]
+// }
 
-//     console.log('a[j+1]'+a[j+1],a[j])
-//     a[j+1] = a[j]
+// let a =  [-6,8,5,20,-4];
+// console.log(Qc(a))
+
+// 14 - Mergesort
+
+// function MergeSort(a){
+//     if(a.length<2){
+//         return a
+//     }
+// let M = Math.floor(a.length/2);
+// let l = a.slice(0,M);
+// let r = a.slice(M)
+// return Merge(MergeSort(l),MergeSort(r))
+// }
+// function Merge(left,Right){
+// let sorted = []
+// while(left.length && Right.length){
 //     console.log(a)
-//     j = j-1;
-//    }
-//    a[j+1] = numberI
-//   }
-//   return a
+// if(left[0]<Right[0]){
+// sorted.push(left.shift())
+// }else{
+//     sorted.push(Right.shift())
 // }
-// console.log(IS(a))
-
-// 14 - Quick Sort
-
-// let a = [-6,20,8,-2,4];
-// function q(a){
-
-//   if(a.length<2)
-// {
-//   return a
 // }
-//   let pivot = a[a.length-1]
-
-//   let left  = [] ; 
-//   let right = [] ; 
-
-//   for (let index = 0; index < a.length-1; index++) {
-//     // console.log(index)
-
-//     if(a[index]<pivot){
-//       left.push(a[index])
-//     }
-//     else{
-//       right.push(a[index])
-//     }
-// console.log(left,pivot,right)
-//   }
-//   return [...q(left), pivot , ...q(right)]
-// }
-// console.log(q(a))
-
-// let a = [-6,20,8,-2,4];
-
-// function QS(a){
-
-//   if(a.length<2){
-//     return a
-//   }
-//   let pivot = a[a.length-1]
-//   let left = []
-//   let right = []
-
-// for (let i = 0; i < a.length-1; i ++) {
-//   if(a[i] < pivot){
-//     left.push(a[i])
-//   }else{
-//     right.push(a[i])
-//   }
+// return [...sorted,...left,...Right]
 // }
 
+// let a =  [-6,8,5,20,-4];
+// console.log(MergeSort(a))
 
-// // console.log(left,pivot,right)
-// return [...QS(left),pivot,...QS(right)]
+// 15 - Remove Duplicate 
+
+// function RD(a){
+// let result = []
+// let frequency = {}
+// for (let index = 0; index < a.length; index++) {
+//     // console.log(a[index])
+// let current = a[index]
+// console.log(current)
+// if(!frequency[current]){
+//     console.log()
+// frequency[current] = 1 
+// result.push(current)
+// console.log(index,frequency,frequency[current])
 // }
-// console.log(QS(a))
+// else{
+//     frequency[current] ++ 
+//     // console.log(frequency[index],frequency[current])
+// }
+// }
+// return frequency,result
+// }
+// let a =  [1,2,2,3,3,3,3,3,4];
+// console.log(RD(a))
 
-    </script>
-  <body>
+// 16 - Vowel & Constant
 
-    
+// function vc(a){
+// let v = ''
+// let c =''
+// for (let index = 0; index < a.length; index++) {
+// console.log(a[index]);
+// if(a[index] !=='A' && a[index] !=='a' && a[index] !=='E' && a[index] !=='e' &&a[index] !=='I' &&a[index] !=='i' &&a[index] !=='O' &&a[index] !=='o' &&a[index] !=='U' &&a[index] !=='u'){
+// c+=a[index]
+// }else{
+// v+=a[index]
+// }
+// }
+// return [v,c]
+// }
+// let a = 'Hello World';
+// console.log(vc(a))
 
-  </body>
+// 17 - Carticial Product
+
+// CP = a X b
+
+// let a = [1,2];
+// let b = [3,4];
+// CP = [[1,3],[1,4],[2,3],[2,4]];
+
+// function CP(a,b){
+// let x = []
+// for (let index = 0; index < a.length; index++) {
+// //  console.log(a[index])
+//  for (let j= 0; j< b.length; j++) {
+//     x.push([a[index],b[j]])
+//  }
+// }
+// return x
+// }
+// let a = [1,2];
+// let b = [3,4];
+// console.log(CP(a,b))
+
+
+
+
+
+
+</script>
+
+<body style="background-color: black;">
+
+</body>
+
 </html>

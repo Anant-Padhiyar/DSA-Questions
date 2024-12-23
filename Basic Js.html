@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style class="" style="background-color: black;"></style>
+<script>
+
+// 1 - 
+
+// var a = 10 ; 
+
+// let b = 20 ;
+
+// {
+// let c = 10 ; 
+// console.log(b,c)
+// }
+
+// const c = 30
+
+
+// console.log(a,b,c)
+
+// 2 - 
+
+// Object
+
+// let marks = {
+//     ravi : 34,
+//     age:'45'
+// }
+// console.log(marks)
+
+// Old ES6 Class
+
+// function Person(name,age){
+//     this.name = name,
+//     this.age = age
+// }
+
+// let x = new Person('shubh','56');
+// console.log(x)
+
+// New 
+
+// class Person{
+// constructor(name,age){
+//     this.Name = name,
+//     this.Age = age
+// }
+// }
+
+// let x = new Person('shubh','56');
+// let y = new Person('X','63');
+// console.log(x,y)
+
+// 3 - Functions
+
+// function avg(a,b){
+
+//     return (a+b)/2
+
+// }
+// console.log(avg(10,20))
+
+// const Avg = (a,b) => {
+
+// return (a+b)/2
+
+// }
+
+// console.log(Avg(10,20))
+
+
+// Normal Vs Arrow Function
+
+// Normal - It have it'sown this  
+
+// const obj = {
+// name:'harry',
+// m  : function(){
+// console.log(this.name)
+// }
+// }
+
+// console.log(obj.name)
+// console.log(obj.m())
+// obj.m()
+
+// Arraow - it don't have this.it takes from 
+// Surrounding lexical scopes
+
+// const obj = {
+// name:'harry',
+// m  : ()=>{
+// console.log(this.name)
+// return 0 
+// }
+// }
+
+// const obj = {
+// name:'harry',
+// m  : ()=>{
+
+// console.log(this.name)
+// return 0 
+// }
+// }
+
+// console.log(obj.name)
+// console.log(obj.m())
+// obj.m()
+
+// normal function have arg object
+
+// function normalFunction() {
+//     console.log(arguments);
+// }
+// normalFunction(1, 2, 3); // [1, 2, 3]
+
+// const arrowFunction = (...args) => {
+//     console.log(args);
+// };
+// arrowFunction(1, 2, 3); // [1, 2, 3]
+
+//Normal Function: Can be used as a constructor
+
+// function Normal(a) {
+//     this.value = a;
+// }
+// const instance = new Normal(10);
+// console.log(instance.value); // 10
+
+// Arrow Function: Cannot be used as a constructor.
+
+// const Arrow = (a) => {
+//     this.value = a;
+// };
+// const instance = new Arrow(10); // TypeError: Arrow is not a constructor
+
+
+// Normal Function: return must Require
+
+// function normalFunction(a, b) {
+//     return a + b;
+// }
+
+// Arrow Function: Can return values implicitly
+// if the body is a single expression.
+
+// const arrowFunction = (a, b) => a + b;
+
+// console.log(arrowFunction(10,20))
+
+// 4 - Loops
+
+// While vs do While Diffrence
+
+// While check condition & run
+
+// let x = 10 ;
+
+// while(x>0){
+// console.log(x)
+//     x--
+// }
+
+// But Do while Must run One time & Second time
+// Check condition
+
+// let x = -1 ;
+
+// do{
+//     console.log(x)  
+//     x--
+// }while(x>0)
+
+// for
+
+// for(i = 1 ; i <= 5 ; i++){
+
+//     console.log(i)
+
+// }
+
+// For each For keys & indices 
+
+// let a = [1,2,3,4,5]
+
+// a.forEach((item,index)=>{
+//     console.log(item,index);
+// })
+
+// For Of Use Values
+// let x = 'Hello';
+// for(item of x){
+//     console.log(item)
+// }
+
+// const map = new Map([
+// ["name", "John"],
+//     ["age", 30],
+//     ["city", "New York"]
+
+// ])
+// // console.log(map)
+// for(const [key,value] of map){
+//     console.log(`${key}: ${value}`)
+// }
+
+// 5 - Arrray Methods
+
+// let a = [1,2,3,4,5]
+
+// console.log('a = '+a)
+// console.log('a.length = '+a.length)
+// console.log('a[a.length-1] (Last) = '+a[a.length-1])
+// console.log(a.shift())
+// console.log(a.pop())
+// console.log(a)
+// a.unshift('First unshift');
+// a.push('Hi')
+// console.log(a)
+
+// let a = 'Hello'
+// let x = ''
+// for (let index = 0; index < a.length; index++) {
+
+// let c = a[index].charCodeAt(0)
+//     if(c>= 65 && c<=90){
+// x+=String.fromCharCode(c+32)
+//     }else{
+//         x+=a[index]
+//     }
+// }
+// console.log(x)
+
+
+// let a = [10,20,30,40,50]
+
+// a.splice(0,1);
+// console.log(a)
+// a.splice(0,0,5)
+// console.log(a)
+
+//string Methods
+
+// let a = 'hello World';
+// console.log(a.length);
+
+// a.length = 2;
+// console.log(a.indexOf("he"))
+// console.log(a.replace("he","be"))
+// console.log(a)
+
+// 6 - Map Filter & Reduce
+
+// let a = [1,2,3,4,5]
+
+// a.map((item,index)=>{
+// console.log(item,index)
+
+// })
+
+// console.log(a.map ((a) =>a*a))
+
+
+// console.log(a.filter((a)=>a%2==0))
+
+// console.log(a.reduce((acc, item) => acc + item,0));
+
+
+// let nums = [5, 12, 8, 20, 1];
+// let max = nums.reduce((acc, item) => (item > acc ? item : acc), nums[0]);
+// console.log(max); // Output: 20
+
+// let a = [1, 2, 3, 4, 5];
+// console.log(a.reduce((acc, item) => acc + item, 0));
+
+// 7 - Data Fetching using Asysc await
+
+// let data ; 
+// async function fetchdata(url) {
+// try{
+// let response = await fetch(url);
+// if(!response.ok){
+//     throw 'Error'
+// }
+// let res = await response.json()
+// return res
+// }
+// catch(error){
+// console.log('Error')
+// throw 'Error 2'
+// }
+// }
+
+// (async ()=>{
+// console.log('Fetching ...')
+// data = await fetchdata('https://fakestoreapi.com/products/1')
+// console.log(data)
+// console.log('Fetched')
+// })();
+
+
+// 8 - Localstorage With Fetching data
+
+// let data ; 
+// async function fetchdata(url) {
+// try{
+// let response = await fetch(url);
+// if(!response.ok){
+//     throw 'Error'
+// }
+// let res = await response.json()
+// return res
+// }
+// catch(error){
+// console.log('Error')
+// throw 'Error 2'
+// }
+// }
+
+// (async ()=>{
+// console.log('Fetching ...')
+// data = await fetchdata('https://fakestoreapi.com/products?limit=5')
+// // console.log(data)
+
+// localStorage.setItem('Products',JSON.stringify(data));
+
+// console.log('Fetched')
+
+// let x = localStorage.getItem('Products');
+// console.log(x)
+
+// })();
+
+// console.log(data)
+
+// if(localStorage.getItem('Products')!==null){
+// let x = localStorage.getItem('Products');
+// console.log(x)
+// }
+
+
+</script>
+
+<body style="background-color: black;">
+
+    
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+// 1 - Sum Of Nnatural Numbers
+
+// function sum(N){
+// if(N<0){
+//     return false
+// }
+// let x = 0;
+// for (let index = 1; index < N+1; index++) {
+//     // console.log(x)
+// x = x + index
+// // console.log(x)
+// }
+// return x
+// }
+// console.log(sum(1))
+
+// 2 - Binery
+
+// function isBinery(N){
+// let a = String(N)
+// for (let index = 0; index < a.length; index++) {
+// if(a[index] !=='0' && a[index] !=='1'){
+    
+//    return `${a[index]} is not binery`
+// }
+// }
+//    return `${N} is binery`
+// }
+// let a = 101 ; 
+// console.log(isBinery(a))
+
+// 3 - Odd or Even
+
+// function odd_Even(N){
+
+// if( N % 2 !== 0 ){
+// return false
+// }
+
+// return true
+// }
+// let a = 10
+// console.log(odd_Even(a))
+
+// 4 - Swap two Numbers
+
+// function Swap(a,b){
+
+// let temp = a ;
+// a = b ; 
+// b = temp ;
+
+// return `a = ${a} , b = ${b}`
+// }
+// let a = 10 ; let b = 20 ;
+// console.log(Swap(a,b))
+
+// without third var 
+
+// function Swap(a,b){
+
+// a = a + b ; 
+// b = a - b ; 
+// a = a - b ;
+
+// return `a = ${a} , b = ${b}`
+
+// }
+// let a = 10 ; let b = 20 ;
+// console.log(Swap(a,b))
+
+// 5 - Sum of Digits
+
+// function Sum_Of_Digits(a){
+// let x = String(a);
+// let sum = 0 
+// for (let index = 0; index < x.length; index++) {
+// // console.log(x[index])  
+// sum += Number(x[index])
+// }
+// return sum
+// }
+// let a = 121 ;
+// console.log(Sum_Of_Digits(a))
+
+// 6 - Sum of Matrix
+
+// let a = [[1,2,3],[4,5,6]];
+
+// function Sum_Matrix(a){
+// let sum = 0 
+// for (let index = 0; index < a.length; index++) {
+//     // console.log(a[index])
+// for (let i = 0; i <a[index].length; i++) {
+//     // console.log(a[index][i])
+//    sum += a[index][i]
+// }
+// }   
+// return sum
+// }
+// let a = [[1,2,3],[4,5,10]];
+// console.log(Sum_Matrix(a))
+
+// 7 - Vowel Or Constant
+
+// function Vowel_Or_Consttant(N){
+// if(typeof N == "string"){
+// let c = '';
+// let v = '';
+// for (let index = 0; index < N.length; index++) {
+//     // console.log(N[index])
+// if(N[index] !==' ' && N[index] =='A' || N[index] =='a' || N[index] =='E' || N[index] =='e' || N[index] =='I' || N[index] =='i' || N[index] =='O' || N[index] =='o' || N[index] =='U' || N[index] =='u'){
+// c+=N[index]
+// }else if(N[index] !==' '){
+// v+=N[index]
+// }   
+// }
+// return [c,v]
+// }
+// return false
+// }
+// let a = 'Hello World!' ;
+// console.log(Vowel_Or_Consttant(a))
+
+// Gretest Of 3 
+
+// function G(a,b,c){
+
+// if(a>b){
+// if(a>c){
+//     return `a = ${a}`
+// }else{
+//     return `c = ${c}` 
+// }
+// }
+// else if(b>a){
+//     if(b>c){
+//     return `b = ${b}`
+// }else{
+//     return `c = ${c}` 
+// }
+// }
+
+// }
+// let a = 50 , b = 35 , c = 40 ;
+// console.log(G(a,b,c))
+
+// 8 - Lower to Uppercase
+
+// function L2U(N){
+// if(typeof(N) =='string' ){
+//     let x = ''
+// for (let index = 0; index < N.length; index++) {
+
+// let c = N[index].charCodeAt(0)
+// console.log(N[index],c)
+//     if(c>=97 && c <=122){
+// x +=String.fromCharCode(c-32);
+// console.log('x = '+x)
+//     }else{
+//         x+=N[index]
+//         console.log('x = '+x)
+//     }
+// }
+// return x
+// }
+// }
+// let a = 'Hello'
+// console.log(L2U(a))
+
+// Upper to Lower
+
+// function U2L(N){
+// if(typeof(N) =='string' ){
+//     let x = ''
+//     for (let index = 0; index < N.length; index++) {
+// let c = N[index].charCodeAt(0);
+// // console.log(N[index],c)
+// if(c >=65 && c<=90){
+//     x+=String.fromCharCode(c+32);
+// }else{
+//     x+=N[index]
+// }   
+//     }
+//     return x
+// }
+// }
+// let a = 'Hello';
+// console.log(U2L(a))
+
+
+// 9 - Decimal to Binery
+
+// function D2B(N){
+// if(typeof N =='number'){
+
+// let isNegative = false
+
+// if(N<0){
+// isNegative = true
+// N = -N
+// }
+
+// let binary = '';
+// if(N===0){
+//     binary = '0'
+// }else{
+// while(N>0){
+//     binary = (N % 2) + binary
+// N = Math.floor(N/2)    
+// // console.log(N)
+// }
+// }
+
+// if(isNegative){
+//     return '-'+binary
+// }else{
+// return binary
+// }
+// }
+// }
+
+// let a = 10;
+// console.log(D2B(a))
+
+// 10 - Multiply array
+
+// function Fac(N){
+// let x = N[0];
+// for (let index = 1; index < N.length; index++) {
+// // console.log(N[0ndex])
+// x *= N[index]
+// }
+// return x
+// }
+// let N = [1,2,3,4,5]
+// console.log(Fac(N))
+
+// 11 - Sum of odd & even numbers
+
+// function SOE(N){
+
+// let o = 0
+// let e = 0 
+
+// for (let index = 0; index < N.length; index++) {
+//     if(N[index] % 2 ==0){
+//         e+=N[index]
+//         // console.log('e = '+e)
+//     }else{
+//         o+=N[index]
+//         // console.log('o = '+o)
+//     }
+// }
+// return [o,e]
+// }
+// let a = [1, 2, 3, 4, 5, 6] ; 
+// console.log(SOE(a));
+
+// 12 - Print half diamond
+
+// function H(N){
+// for (let index = 1; index <= N; index++) {
+// let r= ''
+// for (let i = 0; i < index; i++) {
+// r+='*'
+// }
+// console.log(r)
+// }
+
+// for (let index = N-1; index >= 1 ; index--) {
+// let r= ''
+// // console.log(index)
+// for (let i = 0; i < index; i++) {
+//     // console.log('hi')
+// r+='*'
+// }
+// console.log(r)
+// }
+// return `N = ${N}`
+// }
+// let a = 5
+// console.log(H(a))
+
+// 13 - Full Diamond
+
+// function F(N){
+
+// for (let index = 1; index <=N; index++) {
+// let r =''
+
+// for (let i = 0; i < N-index; i++) {
+// r+=' '
+// // console.log(index)
+// }
+
+//     for (let j = 0; j < (2*index)-1; j++) {
+//        r+='*'
+//     //    console.log(index)
+//     }
+//     console.log(r)
+// }
+// // console.log(N)
+
+// for (let index = N-1; index >=1; index--) {
+
+// let r = ''
+
+// for (let i = 0; i < N-index; i++) {
+// r+=' '
+// }
+
+// for (let j = 0; j < (2*index)-1; j++) {
+// r+='*'
+// }
+
+// console.log(r)
+// }
+
+// return `N = ${N}`
+    
+// }
+
+
+// let a = 5 ;
+// console.log(F(a))
+
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

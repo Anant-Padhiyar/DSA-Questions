@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+// 1 - Averaging numbers
+
+
+// function avg(a){
+
+// if(a.length<1){
+// return false
+// }
+// let sum = 0
+// let error = false
+// for (let index = 0; index < a.length; index++) {
+// if(typeof(a[index])=="number"){
+// sum+=a[index]
+// }
+// else{
+//     error = true
+//     return 'error'
+// }
+// }
+// if(!error){
+//     avg = sum/a.length;
+//     return avg
+// }
+// }
+// let a = [65,67,78,89,56];
+
+// console.log(avg(a))
+
+
+// 2 - Vowel Or constant 
+
+// AEIOU & aeoiu are constants & other char are vowel 
+// task is spaerate vowel & constants
+// From "Hello World"
+
+
+// function vc(a){
+// let v =''
+// let c =''
+// for (let index = 0; index < a.length; index++){
+
+//     if(a[index]!==' ' && a[index]!=='A' &&a[index]!=='a' &&a[index]!=='E' &&a[index]!=='e' &&a[index]!=='I' &&a[index]!=='i' &&a[index]!=='O' &&a[index]!=='o' &&a[index]!=='U' &&a[index]!=='u'){
+// c+=a[index]
+//     }
+//     else if(a[index]!==' '){
+//     v+=a[index]
+//     }
+
+// }
+// return [c,v]
+
+// }
+
+// let a = "Hello World";
+
+// console.log(vc(a))
+
+
+// 3 - Duplicate Number Delete From Array
+
+// let a = [1,2,2,3,3,3,3,3,4,5]
+
+// function RD(a){
+
+//     let result = []
+//     let frequency = {}
+
+//     if(a.length<1){
+// return false
+//     }
+
+//     for (let index = 0; index < a.length; index++) {
+//     // console.log(a[index])
+//     let current  = a[index]
+
+//     if(!frequency[current]){
+//         frequency[current] = 1
+//         result.push(current)
+//     }
+//     else{
+//         frequency[current]++
+//     }
+
+//     }
+
+// return [frequency,result]
+
+// }
+
+// let a = [1,2,2,3,3,3,3,3,4,5]
+// console.log(RD(a))
+
+// 4 - Localstorage Cart Without chatgpt 
+// Or Google use 
+// fetch & save data in localstorage as Products
+// from https://fakestoreapi.com/products?limit=5
+
+// let data ;
+
+// async function fetchdata(url){
+
+// try{
+    
+// let response = await fetch(url);
+
+// if(!response.ok){
+//     return 'Fetching Error'
+// throw error
+// }
+// let res = await response.json();
+// return res
+
+// }catch(error){
+// return 'Fetching Error'
+// throw error
+// }
+
+// }
+// (async ()=>{
+//     console.log('Fetching ... ')
+// data = await fetchdata('https://fakestoreapi.com/products?limit=5')
+// console.log(data)
+// localStorage.setItem('Products',JSON.stringify(data));
+// let x = localStorage.getItem('Products');
+// // console.log(x)
+// })()
+
+
+</script>
+
+
+<body class="" style="background-color: black;">
+
+<div>
+ 
+</div>
+
+</body>
+</html>

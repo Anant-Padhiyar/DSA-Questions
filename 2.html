@@ -335,11 +335,183 @@
 // let a = 5 ;
 // console.log(F(a))
 
+// 14 - Alternate Elements of Array
 
+// function Alter(a){
+// console.log(a)
+// let x = []
+// for (let index = 0; index < a.length; index++) {
+// // console.log(a[index])
+// if(index%2==0){
+// x.push(a[index])
+// }        
+//     }
+//     return x
+// }
+// let a = [10,20,30,40,50];
+// console.log(Alter(a))
+
+// 15 - Count Digit
+
+// function Count(a){
+//     console.log(a)
+// if(typeof(a)=="number"){
+// let x = String(a)
+// let y = 0
+// for (let index = 0; index < x.length; index++) {
+// // console.log(x[index])
+// let c = Number(x[index])
+// y+=c
+// // console.log('Y = '+y)
+// }
+// return y
+// }
+// }
+// let a = 999 ; 
+// console.log(Count(a));
+
+// 16 - isPelindrome
+// Worksin Odd & Even Numbers of Array.length
+
+// function isPelindrome(a){
+//     let x = a.length;
+//     // console.log(x)
+//     for (let index = 0; index < x/2; index++) {
+//         // console.log(x,x/3,index,a[index] , a[x-index-1])
+//  if(a[index]!==a[x-index-1]){
+//     return false
+//  }
+//     }
+// return true
+// }
+// let a = [7,8,9,8,7];
+// console.log(isPelindrome(a))
+
+// 17 - Median Of Array
+
+// function Median(a){
+// let l = a.length
+// let sum = 0
+// for (let index = 0; index < a.length; index++) {
+// sum+=a[index]
+// }
+// return sum/l
+// }
+// let a = [1, 3, 4, 2, 6, 5, 8, 7]
+// console.log(Median(a))
+
+// 18 - Armstrong Number
+
+// function Armstrong(a){
+// console.log(Math.pow(10,3))
+// let arm = 0;
+// let x = String(a)
+// let l = x.length
+// for (let index = 0; index < x.length; index++) {
+// //  console.log(x[index])
+//  let temp = Number(x[index]) 
+// let r = 
+// //  console.log('Temp = '+temp)
+//  arm+=Math.pow(temp,l)
+// }
+// return arm==a
+// }
+// let a = 1634
+
+// console.log(Armstrong(a))
+
+// 19 - Reverse Array
+
+// function Reverse(a){
+//     console.log(a)
+// let r = []
+// for (let index = a.length-1; index >=0; index--) {
+// // console.log(a[index])    
+// r.push(a[[index]])
+// }
+// return r
+// }
+// let a = [1,2,3,4,5,6,7];
+// console.log(Reverse(a))
+
+// 20 - Remove Spaces
+
+// function RS(a){
+// a = String(a);
+// let b = ''
+// for (let index = 0; index < a.length; index++) {
+// // console.log(a[index])
+// if(a[index] !== ' '){
+// b+=a[index]
+// }
+// }
+// return b
+// }
+// let a = 'Hello My Name is Xyz'
+// console.log(RS(a))
+
+// 21 - sum Of Digit is Pelindrome Or Not
+
+// function SumOfDisP(a){
+// let x = String(a);
+// let sum = 0 ;
+// console.log('Number = '+x)
+// for (let index = 0; index < x.length; index++) {
+// sum +=Number(x[index])
+// }
+// // console.log(sum)
+// let sumA = String(sum);
+// console.log('Sum = '+sumA)
+// function isP(sumA){
+// for (let index = 0; index < sumA.length; index++) {
+//     // console.log(a[index])
+// if(sumA[index]!==sumA[sumA.length-index-1]){
+//     return false
+// }
+// }
+// return true
+// }
+// return isP(sumA)
+// }
+// let a = 994
+// console.log(SumOfDisP(a))
+
+// 22 - isPerfect Array 
+
+// function isPerfect(a,n){
+
+// let i = 1 ; 
+
+// console.log(a)
+
+// while(a[i] > a[i-1] && i<n)
+// {
+//     console.log('i = '+i,', n = '+n+' , ',a[i-1]+' < '+a[i])
+//     ++i
+// }
+
+// while(a[i]==a[i-1] && i<n){
+//     console.log('i = '+i,', n = '+n,a[i-1]+' = = '+a[i])
+//     ++i
+// }
+
+// while(a[i] < a[i-1] && i<n)
+// {
+//     console.log('i = '+i,', n = '+n,a[i-1]+' > '+a[i])
+//     ++i
+// }
+
+// return (i==n)
+// console.log(i)
+
+// }
+// let arr = [1,3,4,5,6,6,4,2,1];
+
+// console.log(isPerfect(arr,arr.length))
 
 </script>
 
-<body>
+<body class="" style='background-color: black;'>
     
 </body>
 </html>
